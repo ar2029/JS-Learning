@@ -1,0 +1,45 @@
+<!-- Question 1 :
+Explore and explain the various methods in console function
+Explain them
+Ex. console.log()
+console.warn().
+etc... -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Qestion 1, Day 1, Date: 14 July 2020</title>
+</head>
+
+<body style="background-color: gainsboro;">
+
+    <h2>Answer:1 Press F12 and navigate to console and then messages.</h2>
+
+    <script>
+        
+        var a = { name: "Me", age: "22", city: "New Delhi" }
+        var b = { name: "You", age: "24", city: "Mumbai" }
+        var c = { name: "GitHub", age: "15", city: "San Francisco" }
+
+        console.time('Time taken');
+
+        console.log("The console. log() is a function that writes a message to log on the debugging console, such as Webkit or Firebug. In a browser you will not see anything on the screen. It logs a message to a debugging console.");
+
+        console.error("The Error Console is a tool available in most Mozilla-based applications that is used for reporting errors in the application chrome and in web pages user opens. It reports JavaScript-related errors and warnings, CSS errors and arbitrary messages from chrome code");
+
+        console.warn("The console. warn() method is used to write a warning message in the console. So open the console to display the output (warning message).");
+
+        console.log('The console.table() allows to display data in the console in a nice tabular format.');
+        console.table({ a, b, c });
+
+        console.log('%c Custom css script message', 'color:green;');
+
+        console.log('Styntax: console.timeEnd(label), label: The name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the Web Console along with an indicator that the time has ended. definition: Stops a timer that was previously started by calling console.time().');
+        console.timeEnd('Time taken');
+
+    </script>
+
+</body>
+
+</html>
