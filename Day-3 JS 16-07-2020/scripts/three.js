@@ -50,7 +50,7 @@ console.log(result);
 // switch case
 // syntax:
 /*
-          switch(arg){
+          switch(true){
               case 1:
                   code here;
                   break;
