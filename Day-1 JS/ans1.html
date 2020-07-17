@@ -16,27 +16,58 @@ etc... -->
 
     <h2>Answer:1 Press F12 and navigate to console and then messages.</h2>
 
+    <p>The Console methods are as follows (Click respective button and check result in Console) </p>
+    <ol reversed="True" type="I">
+        <li><button id="log">log()</button>&nbsp Displays log message in console</li><br>
+        <li><button id="err">error()</button>&nbsp Displays error message in console</li><br>
+        <li><button id="warnn">warn()</button>&nbsp Displays warning message in console</li><br>
+        <li><button id="tabl">table()</button>&nbsp Display the table</li><br>
+        <li><button id="countt">count()</button>&nbsp Shows the count</li><br>
+        <li><button id="clr">clear()</button>&nbsp Clears the console</li><br>
+        <li><button id="cstmcss">click for custom css (%c)</button>&nbsp Display custom css , focus on color</li><br>
+        <li><button id="time_end">timeEnd()</button>console.time('Time taken') should also be typed once</li><br>
+    </ol>
+
     <script>
-        
-        var a = { name: "Me", age: "22", city: "New Delhi" }
-        var b = { name: "You", age: "24", city: "Mumbai" }
-        var c = { name: "GitHub", age: "15", city: "San Francisco" }
 
-        console.time('Time taken');
+        document.getElementById("log").onclick = function () {
+            console.log("The console. log() is a function that writes a message to log on the debugging console, such as Webkit or Firebug. In a browser you will not see anything on the screen. It logs a message to a debugging console.");
+        }
 
-        console.log("The console. log() is a function that writes a message to log on the debugging console, such as Webkit or Firebug. In a browser you will not see anything on the screen. It logs a message to a debugging console.");
+        document.getElementById("err").onclick = function () {
+            console.error("The Error Console is a tool available in most Mozilla-based applications that is used for reporting errors in the application chrome and in web pages user opens. It reports JavaScript-related errors and warnings, CSS errors and arbitrary messages from chrome code");
+        }
 
-        console.error("The Error Console is a tool available in most Mozilla-based applications that is used for reporting errors in the application chrome and in web pages user opens. It reports JavaScript-related errors and warnings, CSS errors and arbitrary messages from chrome code");
+        document.getElementById("warnn").onclick = function () {
+            console.warn("The console. warn() method is used to write a warning message in the console. So open the console to display the output (warning message).");
+        }
 
-        console.warn("The console. warn() method is used to write a warning message in the console. So open the console to display the output (warning message).");
+        document.getElementById("tabl").onclick = function () {
+            var a = { name: "Me", age: "22", city: "New Delhi" }
+            var b = { name: "You", age: "24", city: "Mumbai" }
+            var c = { name: "GitHub", age: "15", city: "San Francisco" }
+            console.log('The console.table() allows to display data in the console in a nice tabular format.');
+            console.table({ a, b, c });
+        }
 
-        console.log('The console.table() allows to display data in the console in a nice tabular format.');
-        console.table({ a, b, c });
+        document.getElementById("clr").onclick = function () { console.clear(`Definition and Usage. The console.clear () method clears the console. The console.clear () method will also write a message in the console: "Console was cleared".`); }
 
-        console.log('%c Custom css script message', 'color:green;');
+        document.getElementById("countt").onclick = function () { console.count(`Writes to the console the number of times that particular console.count() is called. You can add a label that will be included in the console view. By default the label "default" will be added.`); }
 
-        console.log('Styntax: console.timeEnd(label), label: The name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the Web Console along with an indicator that the time has ended. definition: Stops a timer that was previously started by calling console.time().');
-        console.timeEnd('Time taken');
+        document.getElementById("cstmcss").onclick = function () {
+            console.log(`syntax: function_name('%csome_string', 'css here'`);
+            console.log('%cCustom css script message', 'color:green;');
+        }
+
+        document.getElementById("time_end").onclick = function () {
+            console.log('Styntax: console.timeEnd(label), label: The name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the Web Console along with an indicator that the time has ended. definition: Stops a timer that was previously started by calling console.time().');
+            let i = 0;
+            console.time('test while loop');
+            while (i < 1000000) {
+                i++
+            }
+            console.timeEnd('test while loop');
+        }
 
     </script>
 
